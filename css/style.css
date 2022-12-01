@@ -1,3 +1,4 @@
+/* MAKE THE WEBSITE RESPONSIVE */
 :root {
     --sbgreen: rgb(0, 99, 65);
 }
@@ -41,10 +42,9 @@ a {
     height: 100px;
     padding: 0 10px;
     font-size: 14px;
-    box-shadow: 1px 3px rgba(0,0,0,.1),0 2px 2px rgba(0,0,0,.06),0 0 2px rgba(0,0,0,.07);
+    box-shadow: 1px 3px rgba(0, 0, 0, .1),0 2px 2px rgba(0, 0, 0, .06),0 0 2px rgba(0, 0, 0, .07);
     margin-bottom: 30px;
 }
-
 
 .navbar-left {
     display: flex;
@@ -55,8 +55,9 @@ a {
     color: var(--sbgreen);
 }
 
-.navbar-left svg {
+.navbar-left img {
     width: 50px;
+    z-index: 1000;
 }
 
 .navbar-left div {
@@ -64,7 +65,7 @@ a {
     font-weight: 600;
 }
 
-.navbar-left >* {
+.navbar-left > * {
     margin: 20px 0 20px 20px;
 }
 
@@ -74,7 +75,7 @@ a {
     align-items: center;
 }
 
-.navbar-right >* {
+.navbar-right > * {
     margin: 0 10px;
 }
 
@@ -83,7 +84,7 @@ a {
     justify-content: center;
     align-items: center;
     font-weight: 500;
-    color: rgba(0,0,0,.87);
+    color: rgba(0, 0, 0, .87);
     margin-right: 40px;
 }
 
@@ -102,7 +103,7 @@ a {
 }
 
 .join-now:hover, .sign-in:hover {
-    background-color: rgba(0,0,0,.7);
+    background-color: rgba(0, 0, 0, .7);
 }
 
 
@@ -115,6 +116,7 @@ a {
 }
 
 .image-half {
+    display: flex;
     width: 50%;
 }
 
@@ -140,7 +142,7 @@ a {
 
 .text-half span {
     margin-top: 20px;
-    font-weight: s800;
+    font-weight: 800;
     font-size: 50px;
     line-height: 60px;
 }
@@ -148,7 +150,6 @@ a {
 .text-half .text {
     margin-top: 20px;
     margin-bottom: 20px;
-    max-width: 518px;
     font-weight: 400;
     font-size: 24px;
     max-height: 108px;
@@ -182,9 +183,9 @@ a {
     display: flex;
     width: 100%;
     height: 360px;
-    box-shadow: -1px -4px 7px -3px rgba(169,155,155,0.75);
-    -webkit-box-shadow: -1px -4px 7px -3px rgba(169,155,155,0.75);
-    -moz-box-shadow: -1px -4px 7px -3px rgba(169,155,155,0.75);
+    box-shadow: -1px -4px 7px -3px rgba(169, 155, 155, 0.75);
+    -webkit-box-shadow: -1px -4px 7px -3px rgba(169, 155, 155, 0.75);
+    -moz-box-shadow: -1px -4px 7px -3px rgba(169, 155, 155, 0.75);
 }
 
 .linkColumn {
@@ -194,7 +195,7 @@ a {
 
 }
 
-.linkColumn >* {
+.linkColumn  > * {
     display: block;
     margin-bottom: 10px;
     font-family: SoDoSans,Helvetica Neue,Helvetica,Arial,sans-serif;
@@ -209,14 +210,14 @@ a {
 }
 
 .link {
-    color:rgb(96, 102, 100);
+    color: rgb(96, 102, 100);
     font-feature-settings: "calt";
     font-size: 16px;
     font-weight: 400;
 }
 
 .link:hover {
-    color: red;
+    color:rgb(35, 36, 36);
 }
 
 .iconBlock {
@@ -232,6 +233,8 @@ a {
     padding: 5px;  
 }
 
+/* add icon:hover animation here*/
+
 .linkList {
     margin-left: 32px;
 }
@@ -244,7 +247,7 @@ a {
     margin-right: 15px;
 }
 
-.textLink :hover {
+.textLink:hover {
     text-decoration: underline;
 }
 
@@ -254,6 +257,20 @@ a {
     font-feature-settings: "calt";
     font-size: 14px;
     font-weight: 400;
+}
+
+
+/* Mobile Query */
+@media only screen and (max-width: 750px) {
+    .navbar-right > * {
+        visibility: hidden;
+    }
+
+    .contentColumn {
+        height: auto;
+        /*Fix this here, text is overlapping and not good behaviour is being shown when window is resized*/
+        display: block;
+    }
 }
 
 /* Utilities */
